@@ -10,9 +10,11 @@ of a module and its functions and/or classes.
 
 #TODO (student): define your EXPECTED_BAKE_TIME (required) and PREPARATION_TIME (optional) constants below.
 
+EXPECTED_BAKE_TIME = 40
+PREPARATION_TIME = 2
 
 #TODO (student): Remove 'pass' and complete the 'bake_time_remaining()' function below.
-def bake_time_remaining():
+def bake_time_remaining(elapsed_bake_time):
     """Calculate the bake time remaining.
 
     Parameters:
@@ -26,17 +28,35 @@ def bake_time_remaining():
     based on the `EXPECTED_BAKE_TIME`.
     """
 
-    pass
+    return EXPECTED_BAKE_TIME - elapsed_bake_time
 
 
 #TODO (student): Define the 'preparation_time_in_minutes()' function below.
 # To avoid the use of magic numbers (see: https://en.wikipedia.org/wiki/Magic_number_(programming)), you should define a PREPARATION_TIME constant.
 # You can do that on the line below the 'EXPECTED_BAKE_TIME' constant.
 # This will make it easier to do calculations, and make changes to your code.
+def preparation_time_in_minutes(number_of_layers):
+    """Calculates the time elapsed with prepating lasagna
+    
+    Parameters:
+        number_of_layers (int): number of layers in the lasagna
 
+    Returns:
+        int: The total elapsed time
+        
+    """
+    return PREPARATION_TIME * number_of_layers
 
 
 #TODO (student): define the 'elapsed_time_in_minutes()' function below.
+def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
+    """Calculates the elapsed time for making lasagna
+
+    Parameters:
+        number_of_layers (int): number of layers in the lasagna
+        elapsed_baked_time (int): the bake time take as passed
+    """
+    return PREPARATION_TIME * number_of_layers + elapsed_bake_time
 
 
 
